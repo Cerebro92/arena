@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>View Articles!</title>
+</head>
+    <h1>KnowledgeShare</h1>
+    <body>
+	<p>{{ author_name }}</p>
+	{% if article_list %}	
+	<ul>
+		{% for article in article_list %}
+			<li>{{ article.article_title}}</li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<p>The list is empty</p>
+	{% endif %}
+    </body>
+<button type="button" onclick ="location.href='/new_article/'">Add more articles</button>
+<button type="button" onclick ="location.href='/logout/'">Logout</button>
+</html>
