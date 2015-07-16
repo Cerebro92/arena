@@ -7,7 +7,9 @@
 	{% if article_list %}	
 	<ul>
 		{% for article in article_list %}
-			<li>{{ article.article_title}}</li>
+			<li>{{ article.article_title}}:
+			{{ article.article_content }}</li>
+			<br>
 		{% endfor %}
 	</ul>
 	{% else %}
